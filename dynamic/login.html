@@ -1,0 +1,15 @@
+<form action="login"method="post">
+    {% csrf_token %}
+   
+    <h1>SIGN IN</h1>
+    <label>EMAIL</label>
+    <input type="email"name="em">
+    <span style="color:brown;">{{error}}</span>
+    <br>
+    <br>
+    <label>PASSWORD</label>
+    <input type="password"name="ps">
+    <br>
+    <br>
+    <button type="submit">LOGIN</button>
+</form>

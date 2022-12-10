@@ -1,0 +1,25 @@
+<form action="details"method="post">
+    {% csrf_token %}
+    <table border="2px solid;">
+        <thead>
+            <th>FULL NAME</th>
+            <th>MOBILE NUMBER</th>
+            <th>EMAIL ID</th>
+            <th>PASSWORD</th>
+            <th>EDIT</th>
+            <th>DELETE</th>
+        </thead>
+        <tbody>
+            {% for ls in data %}
+            <tr>
+                <td>{{ls.fn}}</td>
+                <td>{{ls.mb}}</td>
+                <td>{{ls.em}}</td>
+                <td>{{ls.ps}}</td>
+                <td><button><a href="/edit?idn={{ls.id}}">EDIT</a></button></td>
+                <td><button><a href="/delete?idn={{ls.id}}">DELETE</a></button></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>

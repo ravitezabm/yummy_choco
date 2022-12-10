@@ -1,0 +1,20 @@
+<form action="chocoupload"method="post"enctype="multipart/form-data">
+    {% csrf_token %}
+    <h2 style="color:darkgreen;">{{success}}</h2>
+    <h1>CHOCOLATES</h1>
+    <label>Chocolate name</label>
+    <input type="text"name="cn">
+    <br>
+    <br>
+    <label>Chocolate</label>
+    <input type="file"name="ch">
+    <br>
+    <br>
+    <label>Chocolate Price</label>
+    <input type="number"name="cp">
+    <br>
+    <br>
+    <button type="submit">SUBMIT</button>
+
+
+</form>

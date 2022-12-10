@@ -1,0 +1,21 @@
+<form action="reg"method="post">
+    {% csrf_token %}
+<h1>REGISTRATION FORM</h1>
+<label>FULL NAME</label>
+<input type="text"placeholder="FULL NAME"name="nm">
+<br>
+<br>
+<label>MOBILE NUMBER</label>
+<input type="number"placeholder="MOBILE NUMBER"name="mb">
+<br>
+<br>
+<label>EMAIL</label>
+<input type="email"placeholder="EMAIL"name="em">
+<br>
+<br>
+<label>PASSWORD</label>
+<input type="password"placeholder="PASSWORD"name="ps">
+<br>
+<br>
+<button type="submit">REGISTER</button>
+</form>

@@ -1,0 +1,28 @@
+<form action="update"method="post">
+    {% csrf_token %}
+    <table border="2px solid;">
+        <thead>
+            <th>FULL NAME</th>
+            <th>MOBILE NUMBER</th>
+            <th>EMAIL ID</th>
+            <th>PASSWORD</th>
+            <th>UPDATE</th>
+            
+        </thead>
+        <tbody>
+            {% for ls in data %}
+            <tr>
+                <td>
+                    <input type="text"name="nm"value="{{ls.fn}}">
+                    <input type="text"name="idno"value="{{ls.id}}"hidden>
+                </td>
+                <td><input type="number"name="mb"value="{{ls.mb}}"</td>
+                <td><input type="email"name="em"value="{{ls.em}}"</td>
+                <td><input type="password"name="ps"value="{{ls.ps}}"</td>
+                <td><button type="submit">UPDATE</button></td>
+                
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
